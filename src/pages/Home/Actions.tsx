@@ -4,12 +4,10 @@ import { toast } from 'sonner';
 
 import ENDPOINTS from '@/api';
 import { DownButton, UpButton } from '@/components/ActionButton';
-import { useBoundedBaseAddress } from '@/hooks/useBoundedBaseAddress';
 import { useSendTx } from '@/hooks/useSendTx';
 import { useX402FetchWithPay } from '@/hooks/useX402FetchWithPay';
 import { cn } from '@/lib/utils';
 import useBettingStatusStore from '@/store/useBettingStatusStore';
-import useBindDialogOpenStatusStore from '@/store/useBindDialogOpenStatusStore';
 import useButtonHoverStatusStore from '@/store/useButtonHoverStatusStore';
 import useRoundStore from '@/store/useRoundStore';
 
@@ -28,9 +26,6 @@ const Actions = () => {
   });
   const { open } = useAppKit();
 
-  const { setOpen } = useBindDialogOpenStatusStore();
-  const { shouldShowBindDialog } = useBoundedBaseAddress();
-
   const { sendTx, isLoading } = useSendTx();
   const fetchWithPay = useX402FetchWithPay();
 
@@ -48,11 +43,6 @@ const Actions = () => {
 
   const handleBet = async (direction: 'up' | 'down') => {
     if (isLoading || isBetting) return;
-
-    if (shouldShowBindDialog) {
-      setOpen(true);
-      return;
-    }
 
     if (!isSolanaConnected) {
       open({

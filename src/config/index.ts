@@ -3,6 +3,7 @@ import devConfig from './development';
 import prodConfig from './production';
 
 const getConfig = () => {
+  return { ...commonConfig, ...devConfig };
   const isLocal = import.meta.env.DEV;
   if (isLocal) {
     return { ...commonConfig, ...devConfig };

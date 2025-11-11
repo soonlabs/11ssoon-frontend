@@ -20,14 +20,14 @@ interface ResultItemProps {
   direction: 'up' | 'down';
   // Amount won (e.g., 5000)
   amount: number;
-  // Token symbol (e.g., '$10s')
+  // Token symbol (e.g., '$11s')
   tokenSymbol?: string;
 }
 
 const WinResultItem = ({
   direction,
   amount,
-  tokenSymbol = '$10s',
+  tokenSymbol = '$11s',
 }: ResultItemProps) => {
   // Format amount with comma separator
   const formattedAmount = amount.toLocaleString();
@@ -261,15 +261,15 @@ const Result = () => {
             kind: 'WIN',
             id: item.orderId,
             direction: item.direction,
-            amount: 0.5, // Fixed
-            tokenSymbol: '$10s', // Fixed
+            amount: 1, // Fixed
+            tokenSymbol: '$11s', // Fixed
           });
         } else {
           addItems.push({
             kind: 'LOSE',
             id: item.orderId,
             direction: item.direction,
-            amount: 0.5, // Fixed
+            amount: 1, // Fixed
             tokenSymbol: 'USDC', // Fixed
           });
         }

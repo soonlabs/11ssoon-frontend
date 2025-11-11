@@ -1,7 +1,7 @@
 import { solana, AppKitNetwork } from '@reown/appkit/networks';
 
 export default {
-  API_BASE_URL: 'https://api.10ssoon.com',
+  API_BASE_URL: 'https://api.11ssoon.com',
   networks: [solana] as [AppKitNetwork, ...AppKitNetwork[]],
 
   SOLANA_USDC_ADDRESS: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',

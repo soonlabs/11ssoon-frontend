@@ -19,7 +19,7 @@ interface BettingStatusState {
 const useBettingStatusStore = create<BettingStatusState>(set => ({
   isBetting: false,
   countdown: 0,
-  totalCountdown: 10,
+  totalCountdown: 11,
   isSettling: false,
   bettingDirection: null,
   bettingResult: null,

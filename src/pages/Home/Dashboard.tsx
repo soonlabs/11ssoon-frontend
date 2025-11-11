@@ -170,9 +170,9 @@ function Dashboard() {
         'xs:px-6 relative rounded-[12px] bg-[#151515] px-2 pt-[30px] pb-[18px]',
         // Five mutually exclusive states, priority from high to low:
         // 1. Final result - Win (gold inner shadow)
-        bettingResult === 'win' && 'shadow-[0_0_100px_0_#FFD900_inset]',
+        bettingResult === 'win' && 'border-[3px] border-[#FFD900]',
         // 2. Final result - Lose (gray inner shadow)
-        bettingResult === 'lose' && 'shadow-[0_0_100px_0_#616161_inset]',
+        bettingResult === 'lose' && 'border-[3px] border-white/20',
         // 3. Betting - Up (green animation)
         !bettingResult &&
           isBetting &&
@@ -303,7 +303,7 @@ function Dashboard() {
       ) : (
         <Marquee speed={50} gradient={false}>
           <div className="font-doto mt-6 px-5 text-[32px] leading-[28px] font-medium opacity-0">
-            x402's First Pulse Predict: 1U In, 10s Reveal — Mint Your $10s
+            x402's First Pulse Predict: 1U In, 11s Reveal — Mint Your $11s
           </div>
         </Marquee>
       )}
