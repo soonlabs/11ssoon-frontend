@@ -1,0 +1,36 @@
+/* Preload all button images using hidden pseudo-element */
+.up-button::before,
+.down-button::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  background-image:
+    url('@/assets/actions/up-default.png'),
+    url('@/assets/actions/up-hover.png'),
+    url('@/assets/actions/up-pressed.png'),
+    url('@/assets/actions/up-disabled.png'),
+    url('@/assets/actions/up-loading.png'),
+    url('@/assets/actions/down-default.png'),
+    url('@/assets/actions/down-hover.png'),
+    url('@/assets/actions/down-pressed.png'),
+    url('@/assets/actions/down-disabled.png'),
+    url('@/assets/actions/down-loading.png');
+  pointer-events: none;
+}
+
+.up-button {
+  @apply h-[110px] flex-1 bg-[url('@/assets/actions/up-default.png')] bg-cover bg-center bg-no-repeat hover:bg-[url('@/assets/actions/up-hover.png')] active:bg-[url('@/assets/actions/up-pressed.png')] disabled:bg-[url('@/assets/actions/up-disabled.png')];
+}
+.up-button.active {
+  @apply bg-[url('@/assets/actions/up-pressed.png')];
+}
+
+.down-button {
+  @apply h-[110px] flex-1 bg-[url('@/assets/actions/down-default.png')] bg-cover bg-center bg-no-repeat hover:bg-[url('@/assets/actions/down-hover.png')] active:bg-[url('@/assets/actions/down-pressed.png')] disabled:bg-[url('@/assets/actions/down-disabled.png')];
+}
+.down-button.active {
+  @apply bg-[url('@/assets/actions/down-pressed.png')];
+}
