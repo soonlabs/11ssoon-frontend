@@ -54,7 +54,7 @@ function Header() {
               USDC: {fixNumber(solanaUsdcBalance?.uiAmount, 2)}
             </div>
             <div className="flex items-center gap-1">
-              $11s : {fixNumber(solana11sSoonBalance?.uiAmount, 2)}
+              $11s : {fixNumber(solana11sSoonBalance?.uiAmount, 3)}
             </div>
           </div>
 
