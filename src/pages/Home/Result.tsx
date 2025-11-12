@@ -41,10 +41,7 @@ const WinResultItem = ({
       data-name="up win"
     >
       {/* Background with border and shadow */}
-      <div className="absolute inset-0 rounded-[30px] border-2 border-[#ffd900] bg-[rgba(0,0,0,0.8)]">
-        {/* Inner shadow effect */}
-        <div className="pointer-events-none absolute inset-0 rounded-[25px] shadow-[0px_0px_16px_2px_inset_#ffd900]" />
-      </div>
+      <div className="absolute inset-0 rounded-[12px] border-2 border-[#ffd900] bg-[rgba(0,0,0,0.8)]"></div>
 
       {/* Mask group image */}
       <div className="absolute inset-0" data-name="Mask group">
@@ -53,26 +50,26 @@ const WinResultItem = ({
           className="block h-full w-full max-w-none rounded-[30px] object-cover"
           src={ResultStarSvg}
         />
-        <p className="absolute right-6 bottom-6.5 rotate-[-15deg] text-sm leading-[16px] font-semibold text-white">
-          +{formattedAmount} {tokenSymbol}
-        </p>
       </div>
 
       {/* Direction label (up/down) */}
-      <div className="font-poppins absolute inset-0 flex items-center justify-start">
-        <section className="flex flex-col justify-center gap-[3px] pl-[18px]">
+      <div className="absolute top-1/2 left-[18px] flex -translate-y-1/2 flex-col items-start justify-start">
+        <section className="flex flex-col justify-center gap-[3px]">
           <div className="flex items-baseline gap-[3px]">
             <span
-              className="text-[14px] leading-[14px] font-bold uppercase"
+              className="text-[14px] leading-[18px] font-bold uppercase"
               style={{ color: directionColor }}
             >
               {direction}
             </span>
-            <span className="text-[20px] leading-[20px] font-bold text-[#ffd900] italic">
+            <span className="text-[20px] leading-[24px] font-bold text-[#ffd900] italic">
               Win
             </span>
           </div>
         </section>
+        <p className="text-sm leading-[16px] font-semibold text-white">
+          +{formattedAmount} {tokenSymbol}
+        </p>
       </div>
     </div>
   );
@@ -88,7 +85,7 @@ const LoseResultItem = ({ direction }: ResultItemProps) => {
       data-name="up lose"
     >
       {/* Background with border */}
-      <div className="absolute inset-0 rounded-[30px] border-2 border-[rgba(255,255,255,0.2)] bg-[#292929]" />
+      <div className="absolute inset-0 rounded-[12px] border-2 border-[rgba(255,255,255,0.2)] bg-[#292929]" />
 
       {/* Content layer: flex layout, space-between */}
       <div className="font-poppins absolute inset-0 flex items-center justify-between">
