@@ -37,7 +37,7 @@ const WinResultItem = ({
 
   return (
     <div
-      className="relative h-[70px] w-[203px] shrink-0 md:w-[210px]"
+      className="relative h-[70px] w-[203px] shrink-0 md:w-[211px]"
       data-name="up win"
     >
       {/* Background with border and shadow */}
@@ -81,7 +81,7 @@ const LoseResultItem = ({ direction }: ResultItemProps) => {
 
   return (
     <div
-      className="relative w-[203px] shrink-0 md:w-[210px]"
+      className="relative w-[203px] shrink-0 md:w-[211px]"
       data-name="up lose"
     >
       {/* Background with border */}
@@ -120,9 +120,9 @@ const LoseResultItem = ({ direction }: ResultItemProps) => {
 
 const EmptyResultItem = ({ kind }: { kind: 'NULL_WIN' | 'NULL_LOSE' }) => {
   return kind === 'NULL_WIN' ? (
-    <div className="xs:w-[210px] h-[70px] w-[203px] shrink-0 bg-[url('@/assets/win-ph.png')] bg-contain bg-no-repeat opacity-30"></div>
+    <div className="xs:w-[211px] h-[70px] w-[203px] shrink-0 bg-[url('@/assets/win-ph.png')] bg-contain bg-no-repeat opacity-30"></div>
   ) : (
-    <div className="xs:w-[210px] h-[70px] w-[203px] shrink-0 bg-[url('@/assets/lose-ph.png')] bg-contain bg-no-repeat opacity-30"></div>
+    <div className="xs:w-[211px] h-[70px] w-[203px] shrink-0 bg-[url('@/assets/lose-ph.png')] bg-contain bg-no-repeat opacity-30"></div>
   );
 };
 
